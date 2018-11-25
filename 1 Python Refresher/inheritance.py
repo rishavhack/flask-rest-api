@@ -12,8 +12,8 @@ class Student:
 		return Student(friend_name,self.school)
 
 	@classmethod
-	def friend(self,friend_name):
-		return Student(friend_name,self.school)
+	def friend(self,friend_name,salary):
+		return Student(friend_name,self.school,salary)
 
 anna = Student("Rishav","Oxford")
 
@@ -39,7 +39,7 @@ anna1 = WorkingStudent("Saumya","Oxford",20.0)
 print anna1.salary
 
 #This below work when  @classmethod we appplied
-friend = anna.friend("Ram")
+friend = WorkingStudent.friend(anna,"grf",192)
 print friend.name
 print friend.school
 print friend.salary
